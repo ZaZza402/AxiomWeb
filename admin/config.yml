@@ -1,0 +1,19 @@
+backend:
+  name: github
+  # IMPORTANT: Change this to your GitHub username and the repository name you will create.
+  repo: ZaZza402/AxiomWeb 
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "guide"
+    label: "Guide AI"
+    folder: "_guide"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
