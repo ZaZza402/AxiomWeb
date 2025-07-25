@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   # IMPORTANT: Change this to your GitHub username and the repository name you will create.
   repo: ZaZza402/AxiomWeb 
   branch: main
