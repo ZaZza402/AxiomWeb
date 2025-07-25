@@ -7,13 +7,70 @@ backend:
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
+# This defines all the editable content on your site.
 collections:
+  # Collection for repeatable content like blog posts or guides
   - name: "guide"
     label: "Guide AI"
     folder: "_guide"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Titolo", name: "title", widget: "string"}
+      - {label: "Data di Pubblicazione", name: "date", widget: "datetime"}
+      - {label: "Contenuto", name: "body", widget: "markdown"}
+
+  # Collection for your single, unique pages
+  - name: "pages"
+    label: "Pagine del Sito"
+    files:
+      - name: "index"
+        label: "Homepage"
+        file: "index.html"
+        fields:
+          - {label: "Titolo", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "layout.html"}
+          - {label: "Contenuto Pagina", name: "body", widget: "markdown"}
+      - name: "servizi"
+        label: "Pagina Servizi"
+        file: "servizi.html"
+        fields:
+          - {label: "Titolo", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "layout.html"}
+          - {label: "Contenuto Pagina", name: "body", widget: "markdown"}
+      - name: "portfolio"
+        label: "Pagina Portfolio"
+        file: "portfolio.html"
+        fields:
+          - {label: "Titolo", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "layout.html"}
+          - {label: "Contenuto Pagina", name: "body", widget: "markdown"}
+      - name: "chisono"
+        label: "Pagina Chi Sono"
+        file: "chisono.html"
+        fields:
+          - {label: "Titolo", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "layout.html"}
+          - {label: "Contenuto Pagina", name: "body", widget: "markdown"}
+      - name: "contatti"
+        label: "Pagina Contatti"
+        file: "contatti.html"
+        fields:
+          - {label: "Titolo", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "layout.html"}
+          - {label: "Contenuto Pagina", name: "body", widget: "markdown"}
+      - name: "grazie"
+        label: "Pagina Grazie"
+        file: "grazie.html"
+        fields:
+          - {label: "Titolo", name: "title", widget: "string"}
+          - {label: "Layout", name: "layout", widget: "hidden", default: "layout.html"}
+          - {label: "Contenuto Pagina", name: "body", widget: "markdown"}
+      # Add an entry for your privacy page if you have one
+      # - name: "privacy"
+      #   label: "Pagina Privacy"
+      #   file: "privacy.html"
+      #   fields:
+      #     - {label: "Titolo", name: "title", widget: "string"}
+      #     - {label: "Layout", name: "layout", widget: "hidden", default: "layout.html"}
+      #     - {label: "Contenuto Pagina", name: "body", widget: "markdown"}
